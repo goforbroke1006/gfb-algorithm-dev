@@ -1,6 +1,6 @@
-# GFB algorithm (dev)
+# gfb-algorithm-dev
 
 ### Requirements
 
     $ sudo apt-get install libgtest-dev
-# gfb-algorithm-dev
+
