@@ -7,16 +7,16 @@ project(gfb-algorithm-dev
         LANGUAGES CXX
         )
 
-#include("${JAVA_HOME}/include")
-
 find_package(Java REQUIRED)
 find_package(JNI REQUIRED)
 include_directories(${JNI_INCLUDE_DIRS})
 
 
 add_library(gfb-algorithm-dev SHARED
-        include/jarvis-march.h src/jarvis-march.cpp
-        include/java/com_goforbroke1006_algorithm_JarvisMarch.h src/java/com_goforbroke1006_algorithm_JarvisMarch.cpp
+        include/jarvis-march.h
+        src/jarvis-march.cpp
+        include/java/com_goforbroke1006_algorithm_JarvisMarch.h
+        src/java/com_goforbroke1006_algorithm_JarvisMarch.cpp
         )
 
 set(HDR_PUBLIC
