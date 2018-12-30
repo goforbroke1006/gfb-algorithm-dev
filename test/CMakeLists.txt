@@ -4,12 +4,11 @@ endif ()
 
 include(CTest)
 
-enable_testing()
 add_executable(
         unit_tests
         jarvis-march.cpp
         main.cpp
-)
+        sort.cpp)
 target_link_libraries(
         unit_tests
         gtest

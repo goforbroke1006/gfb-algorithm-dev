@@ -19,11 +19,14 @@ add_library(gfb-algorithm-dev SHARED
         src/java/com_goforbroke1006_algorithm_JarvisMarch.cpp
         include/golang/jarvis-march.h
         src/golang/jarvis-march.cpp
-        )
+        include/sort.h src/sort.cpp)
+
+target_link_libraries(gfb-algorithm-dev pthread)
 
 set(HDR_PUBLIC
         include/jarvis-march.h
         include/golang/jarvis-march.h
+        include/sort.h
         )
 set_target_properties(gfb-algorithm-dev PROPERTIES PUBLIC_HEADER "${HDR_PUBLIC}")
 install(TARGETS gfb-algorithm-dev
@@ -32,4 +35,5 @@ install(TARGETS gfb-algorithm-dev
         )
 install(DIRECTORY include/ DESTINATION include/${PROJECT_NAME})
 
+enable_testing()
 add_subdirectory(test)
